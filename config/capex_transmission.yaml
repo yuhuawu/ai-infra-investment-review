@@ -1,0 +1,70 @@
+{
+  "default_event": {
+    "hyperscaler": "META",
+    "capex_increment": 10000000000,
+    "source_type": "media_reported",
+    "note": "Mock scenario based on a reported capex range increase; production runs must verify against company filings."
+  },
+  "scenarios": {
+    "conservative": {
+      "capex_multiplier": 0.70,
+      "revenue_capture_multiplier": 0.85,
+      "margin_multiplier": 0.90,
+      "confidence": 0.55
+    },
+    "base": {
+      "capex_multiplier": 1.00,
+      "revenue_capture_multiplier": 1.00,
+      "margin_multiplier": 1.00,
+      "confidence": 0.70
+    },
+    "aggressive": {
+      "capex_multiplier": 1.30,
+      "revenue_capture_multiplier": 1.10,
+      "margin_multiplier": 1.05,
+      "confidence": 0.50
+    }
+  },
+  "depreciation_years": 5,
+  "hyperscalers": {
+    "MSFT": {"tax_rate": 0.18, "market_cap": 3500000000000},
+    "GOOGL": {"tax_rate": 0.16, "market_cap": 2500000000000},
+    "AMZN": {"tax_rate": 0.18, "market_cap": 2200000000000},
+    "META": {"tax_rate": 0.15, "market_cap": 1500000000000},
+    "ORCL": {"tax_rate": 0.19, "market_cap": 420000000000}
+  },
+  "category_shares": {
+    "accelerators": 0.50,
+    "memory_storage": 0.15,
+    "networking": 0.10,
+    "servers": 0.10,
+    "power_cooling": 0.20,
+    "foundry_packaging_indirect": 0.075
+  },
+  "vendors": {
+    "accelerators": [
+      {"ticker": "NVDA", "layer": "L2", "vendor_share": 0.80, "revenue_capture": 0.65, "margin": 0.55, "tax_rate": 0.15, "forward_pe": 30, "market_cap": 4000000000000},
+      {"ticker": "AMD", "layer": "L2", "vendor_share": 0.12, "revenue_capture": 0.55, "margin": 0.30, "tax_rate": 0.15, "forward_pe": 28, "market_cap": 300000000000},
+      {"ticker": "AVGO", "layer": "L2", "vendor_share": 0.08, "revenue_capture": 0.45, "margin": 0.45, "tax_rate": 0.13, "forward_pe": 26, "market_cap": 750000000000}
+    ],
+    "memory_storage": [
+      {"ticker": "MU", "layer": "L3", "vendor_share": 0.28, "revenue_capture": 0.85, "margin": 0.28, "tax_rate": 0.15, "forward_pe": 18, "market_cap": 160000000000},
+      {"ticker": "STX", "layer": "L3", "vendor_share": 0.12, "revenue_capture": 0.80, "margin": 0.22, "tax_rate": 0.15, "forward_pe": 16, "market_cap": 25000000000}
+    ],
+    "networking": [
+      {"ticker": "ANET", "layer": "L4", "vendor_share": 0.30, "revenue_capture": 0.70, "margin": 0.34, "tax_rate": 0.18, "forward_pe": 32, "market_cap": 140000000000},
+      {"ticker": "AVGO", "layer": "L2", "vendor_share": 0.20, "revenue_capture": 0.55, "margin": 0.45, "tax_rate": 0.13, "forward_pe": 26, "market_cap": 750000000000}
+    ],
+    "servers": [
+      {"ticker": "DELL", "layer": "L4", "vendor_share": 0.20, "revenue_capture": 0.80, "margin": 0.08, "tax_rate": 0.18, "forward_pe": 12, "market_cap": 90000000000}
+    ],
+    "power_cooling": [
+      {"ticker": "VRT", "layer": "L4", "vendor_share": 0.15, "revenue_capture": 0.85, "margin": 0.18, "tax_rate": 0.18, "forward_pe": 30, "market_cap": 55000000000},
+      {"ticker": "ETN", "layer": "L4", "vendor_share": 0.12, "revenue_capture": 0.75, "margin": 0.20, "tax_rate": 0.18, "forward_pe": 26, "market_cap": 140000000000}
+    ],
+    "foundry_packaging_indirect": [
+      {"ticker": "TSM", "layer": "L1", "vendor_share": 0.85, "revenue_capture": 1.00, "margin": 0.50, "tax_rate": 0.15, "forward_pe": 22, "market_cap": 950000000000},
+      {"ticker": "ASML", "layer": "L1", "vendor_share": 0.18, "revenue_capture": 0.35, "margin": 0.32, "tax_rate": 0.18, "forward_pe": 28, "market_cap": 330000000000}
+    ]
+  }
+}

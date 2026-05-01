@@ -1,0 +1,213 @@
+{
+  "score_range": [-2, 2],
+  "source_types": [
+    "company_disclosed",
+    "media_reported",
+    "analyst_estimated",
+    "model_estimated",
+    "missing"
+  ],
+  "layers": {
+    "L1": {
+      "tsmc_monthly_revenue_growth": {
+        "label": "TSMC monthly revenue growth",
+        "weight": 0.25,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.35, "plus1": 0.15, "minus1": -0.05, "minus2": -0.15},
+        "required_source_types": ["company_disclosed"]
+      },
+      "advanced_node_mix": {
+        "label": "Advanced node revenue mix",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.70, "plus1": 0.55, "minus1": 0.35, "minus2": 0.25},
+        "required_source_types": ["company_disclosed", "analyst_estimated"]
+      },
+      "equipment_order_visibility": {
+        "label": "Equipment order visibility",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.25, "plus1": 0.10, "minus1": -0.05, "minus2": -0.15},
+        "required_source_types": ["company_disclosed", "analyst_estimated"]
+      },
+      "valuation_risk": {
+        "label": "Valuation risk",
+        "weight": 0.20,
+        "direction": "negative",
+        "thresholds": {"plus2": 0.10, "plus1": 0.25, "minus1": 0.65, "minus2": 0.85},
+        "required_source_types": ["analyst_estimated", "model_estimated"]
+      },
+      "margin_trend": {
+        "label": "Margin trend",
+        "weight": 0.15,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.08, "plus1": 0.02, "minus1": -0.03, "minus2": -0.08},
+        "required_source_types": ["company_disclosed"]
+      }
+    },
+    "L2": {
+      "data_center_revenue_growth": {
+        "label": "Data center revenue growth",
+        "weight": 0.30,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.60, "plus1": 0.25, "minus1": 0.00, "minus2": -0.10},
+        "required_source_types": ["company_disclosed"]
+      },
+      "ai_order_visibility": {
+        "label": "AI order visibility",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.40, "plus1": 0.15, "minus1": -0.05, "minus2": -0.20},
+        "required_source_types": ["company_disclosed", "analyst_estimated"]
+      },
+      "gross_margin_trend": {
+        "label": "Gross margin trend",
+        "weight": 0.15,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.05, "plus1": 0.01, "minus1": -0.02, "minus2": -0.06},
+        "required_source_types": ["company_disclosed"]
+      },
+      "valuation_risk": {
+        "label": "Valuation risk",
+        "weight": 0.20,
+        "direction": "negative",
+        "thresholds": {"plus2": 0.10, "plus1": 0.25, "minus1": 0.65, "minus2": 0.85},
+        "required_source_types": ["analyst_estimated", "model_estimated"]
+      },
+      "supply_bottleneck": {
+        "label": "Supply bottleneck support",
+        "weight": 0.15,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.80, "plus1": 0.55, "minus1": 0.25, "minus2": 0.10},
+        "required_source_types": ["company_disclosed", "media_reported", "analyst_estimated"]
+      }
+    },
+    "L3": {
+      "hbm_price_trend": {
+        "label": "HBM and server memory price trend",
+        "weight": 0.25,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.25, "plus1": 0.10, "minus1": -0.05, "minus2": -0.15},
+        "required_source_types": ["company_disclosed", "analyst_estimated"]
+      },
+      "storage_demand_growth": {
+        "label": "Enterprise storage demand growth",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.30, "plus1": 0.12, "minus1": -0.05, "minus2": -0.15},
+        "required_source_types": ["company_disclosed"]
+      },
+      "margin_trend": {
+        "label": "Margin trend",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.08, "plus1": 0.02, "minus1": -0.03, "minus2": -0.08},
+        "required_source_types": ["company_disclosed"]
+      },
+      "capex_discipline": {
+        "label": "Capex discipline",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.80, "plus1": 0.55, "minus1": 0.30, "minus2": 0.15},
+        "required_source_types": ["company_disclosed", "analyst_estimated"]
+      },
+      "valuation_risk": {
+        "label": "Valuation risk",
+        "weight": 0.15,
+        "direction": "negative",
+        "thresholds": {"plus2": 0.10, "plus1": 0.25, "minus1": 0.65, "minus2": 0.85},
+        "required_source_types": ["analyst_estimated", "model_estimated"]
+      }
+    },
+    "L4": {
+      "ai_networking_order_growth": {
+        "label": "AI networking and optics order growth",
+        "weight": 0.25,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.50, "plus1": 0.20, "minus1": 0.00, "minus2": -0.10},
+        "required_source_types": ["company_disclosed"]
+      },
+      "power_cooling_backlog_growth": {
+        "label": "Power and cooling backlog growth",
+        "weight": 0.25,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.60, "plus1": 0.25, "minus1": 0.00, "minus2": -0.10},
+        "required_source_types": ["company_disclosed"]
+      },
+      "server_margin_trend": {
+        "label": "Server and infrastructure margin trend",
+        "weight": 0.15,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.05, "plus1": 0.01, "minus1": -0.02, "minus2": -0.06},
+        "required_source_types": ["company_disclosed"]
+      },
+      "valuation_risk": {
+        "label": "Valuation risk",
+        "weight": 0.20,
+        "direction": "negative",
+        "thresholds": {"plus2": 0.10, "plus1": 0.25, "minus1": 0.65, "minus2": 0.85},
+        "required_source_types": ["analyst_estimated", "model_estimated"]
+      },
+      "bottleneck_intensity": {
+        "label": "Physical infrastructure bottleneck intensity",
+        "weight": 0.15,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.80, "plus1": 0.55, "minus1": 0.25, "minus2": 0.10},
+        "required_source_types": ["company_disclosed", "media_reported", "analyst_estimated"]
+      }
+    },
+    "L5": {
+      "cloud_revenue_growth": {
+        "label": "Cloud revenue growth",
+        "weight": 0.25,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.35, "plus1": 0.18, "minus1": 0.08, "minus2": 0.00},
+        "required_source_types": ["company_disclosed"]
+      },
+      "rpo_backlog_growth": {
+        "label": "RPO and backlog growth",
+        "weight": 0.25,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.60, "plus1": 0.25, "minus1": 0.05, "minus2": -0.05},
+        "required_source_types": ["company_disclosed"]
+      },
+      "cloud_margin_trend": {
+        "label": "Cloud margin trend",
+        "weight": 0.15,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.05, "plus1": 0.01, "minus1": -0.02, "minus2": -0.06},
+        "required_source_types": ["company_disclosed"]
+      },
+      "fcf_after_capex_trend": {
+        "label": "Free cash flow after capex trend",
+        "weight": 0.20,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.12, "plus1": 0.03, "minus1": -0.05, "minus2": -0.15},
+        "required_source_types": ["company_disclosed", "analyst_estimated"]
+      },
+      "valuation_risk": {
+        "label": "Valuation risk",
+        "weight": 0.15,
+        "direction": "negative",
+        "thresholds": {"plus2": 0.10, "plus1": 0.25, "minus1": 0.65, "minus2": 0.85},
+        "required_source_types": ["analyst_estimated", "model_estimated"]
+      }
+    },
+    "L6": {
+      "reserve_need": {
+        "label": "Reserve need",
+        "weight": 0.60,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.80, "plus1": 0.55, "minus1": 0.25, "minus2": 0.10},
+        "required_source_types": ["model_estimated"]
+      },
+      "portfolio_stress": {
+        "label": "Portfolio stress",
+        "weight": 0.40,
+        "direction": "positive",
+        "thresholds": {"plus2": 0.80, "plus1": 0.55, "minus1": 0.25, "minus2": 0.10},
+        "required_source_types": ["model_estimated"]
+      }
+    }
+  }
+}

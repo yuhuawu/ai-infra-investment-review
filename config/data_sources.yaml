@@ -1,0 +1,59 @@
+{
+  "company_ir": {
+    "TSM": {
+      "ir_pages": ["https://investor.tsmc.com/english/quarterly-results"],
+      "earnings_release_urls": []
+    },
+    "ASML": {
+      "ir_pages": ["https://www.asml.com/en/investors"],
+      "earnings_release_urls": []
+    },
+    "NVDA": {
+      "ir_pages": ["https://investor.nvidia.com/financial-info/quarterly-results/default.aspx"],
+      "earnings_release_urls": []
+    },
+    "AVGO": {
+      "ir_pages": ["https://investors.broadcom.com/financial-information/quarterly-results"],
+      "earnings_release_urls": []
+    },
+    "AMD": {
+      "ir_pages": ["https://ir.amd.com/financial-information/quarterly-results"],
+      "earnings_release_urls": []
+    },
+    "MU": {
+      "ir_pages": ["https://investors.micron.com/financial-information/quarterly-results"],
+      "earnings_release_urls": []
+    },
+    "STX": {
+      "ir_pages": ["https://investors.seagate.com/financial-information/quarterly-results"],
+      "earnings_release_urls": []
+    },
+    "ANET": {
+      "ir_pages": ["https://investors.arista.com/financials/quarterly-results/default.aspx"],
+      "earnings_release_urls": []
+    },
+    "VRT": {
+      "ir_pages": ["https://investors.vertiv.com/financials/quarterly-results/default.aspx"],
+      "earnings_release_urls": []
+    },
+    "MSFT": {
+      "ir_pages": ["https://www.microsoft.com/en-us/investor/earnings"],
+      "earnings_release_urls": []
+    },
+    "GOOGL": {
+      "ir_pages": ["https://abc.xyz/investor/"],
+      "earnings_release_urls": []
+    },
+    "META": {
+      "ir_pages": ["https://investor.atmeta.com/financials/"],
+      "earnings_release_urls": []
+    },
+    "CRWV": {
+      "ir_pages": ["https://investors.coreweave.com/financials/quarterly-results/default.aspx"],
+      "earnings_release_urls": []
+    }
+  },
+  "market": {
+    "fallback_to_mock_without_api_key": true
+  }
+}

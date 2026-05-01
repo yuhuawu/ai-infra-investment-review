@@ -1,0 +1,43 @@
+{
+  "portfolio": {
+    "base_currency": "USD",
+    "allow_broker_connection": false,
+    "allow_auto_trade": false,
+    "cash_ticker": "CASH",
+    "constraints": {
+      "min_cash_weight": 0.05,
+      "max_single_stock_weight": 0.18,
+      "max_high_risk_position": 0.03,
+      "rebalance_band": 0.02,
+      "min_trade_delta": 0.01,
+      "min_confirmed_metric_coverage_for_scoring": 0.60,
+      "min_confirmed_metric_coverage_for_rebalance": 0.60,
+      "allow_rebalance_when_all_scores_zero": false,
+      "missing_data_action": "no_action"
+    },
+    "layer_targets": [
+      {"id": "L1", "target_weight": 0.22, "max_weight": 0.30},
+      {"id": "L2", "target_weight": 0.28, "max_weight": 0.36},
+      {"id": "L3", "target_weight": 0.15, "max_weight": 0.25},
+      {"id": "L4", "target_weight": 0.12, "max_weight": 0.22},
+      {"id": "L5", "target_weight": 0.18, "max_weight": 0.26},
+      {"id": "L6", "target_weight": 0.05, "max_weight": 0.15}
+    ],
+    "holdings": [
+      {"ticker": "TSM", "layer": "L1", "current_weight": 0.105, "risk_bucket": "core"},
+      {"ticker": "ASML", "layer": "L1", "current_weight": 0.045, "risk_bucket": "core"},
+      {"ticker": "NVDA", "layer": "L2", "current_weight": 0.165, "risk_bucket": "core"},
+      {"ticker": "AVGO", "layer": "L2", "current_weight": 0.055, "risk_bucket": "core"},
+      {"ticker": "AMD", "layer": "L2", "current_weight": 0.035, "risk_bucket": "core"},
+      {"ticker": "MU", "layer": "L3", "current_weight": 0.055, "risk_bucket": "cyclical"},
+      {"ticker": "STX", "layer": "L3", "current_weight": 0.025, "risk_bucket": "cyclical"},
+      {"ticker": "ANET", "layer": "L4", "current_weight": 0.035, "risk_bucket": "core"},
+      {"ticker": "VRT", "layer": "L4", "current_weight": 0.035, "risk_bucket": "core"},
+      {"ticker": "MSFT", "layer": "L5", "current_weight": 0.050, "risk_bucket": "core"},
+      {"ticker": "GOOGL", "layer": "L5", "current_weight": 0.050, "risk_bucket": "core"},
+      {"ticker": "META", "layer": "L5", "current_weight": 0.020, "risk_bucket": "core"},
+      {"ticker": "CRWV", "layer": "L5", "current_weight": 0.010, "risk_bucket": "high_risk"},
+      {"ticker": "CASH", "layer": "L6", "current_weight": 0.315, "risk_bucket": "cash"}
+    ]
+  }
+}

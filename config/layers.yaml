@@ -1,0 +1,93 @@
+{
+  "layers": [
+    {
+      "id": "L1",
+      "name": "Semiconductor equipment, foundry, advanced packaging",
+      "target_weight": 0.22,
+      "max_weight": 0.30,
+      "stock_pool": {
+        "core": ["TSM", "ASML", "AMAT", "LRCX", "KLAC"],
+        "optional": ["TEL.T", "BESI.AS", "ASX"]
+      },
+      "key_questions": [
+        "Are advanced nodes and advanced packaging capacity still tight?",
+        "Is TSMC monthly revenue accelerating?",
+        "Are EUV and semiconductor equipment orders improving?"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "GPU, AI ASIC, accelerator silicon, interconnect",
+      "target_weight": 0.28,
+      "max_weight": 0.36,
+      "stock_pool": {
+        "core": ["NVDA", "AVGO", "AMD", "MRVL"],
+        "optional": ["ARM", "INTC"]
+      },
+      "key_questions": [
+        "Is NVIDIA data center growth still strong?",
+        "Are custom ASIC orders accelerating?",
+        "Is AMD gaining meaningful AI accelerator share?"
+      ]
+    },
+    {
+      "id": "L3",
+      "name": "HBM, DRAM, NAND, SSD, HDD",
+      "target_weight": 0.15,
+      "max_weight": 0.25,
+      "stock_pool": {
+        "core": ["MU", "000660.KS", "005930.KS", "SNDK", "WDC", "STX"],
+        "optional": []
+      },
+      "key_questions": [
+        "Are HBM and server DRAM prices rising?",
+        "Are NAND and enterprise SSD margins improving?",
+        "Are memory producers maintaining capex discipline?"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "Networking, optics, servers, power, cooling",
+      "target_weight": 0.12,
+      "max_weight": 0.22,
+      "stock_pool": {
+        "core": ["ANET", "VRT", "ETN", "LITE", "COHR", "DELL"],
+        "optional": ["CIEN", "HPE", "SMCI", "CSCO"]
+      },
+      "key_questions": [
+        "Are AI networking and optical orders accelerating?",
+        "Are power and cooling backlogs expanding?",
+        "Are server OEM margins holding up?"
+      ]
+    },
+    {
+      "id": "L5",
+      "name": "Cloud, LLM platform, and AI compute providers",
+      "target_weight": 0.18,
+      "max_weight": 0.26,
+      "stock_pool": {
+        "core": ["MSFT", "GOOGL", "AMZN", "ORCL", "META"],
+        "optional": ["CRWV"]
+      },
+      "key_questions": [
+        "Are cloud revenue and RPO accelerating?",
+        "Is AI usage translating into revenue?",
+        "Are capex intensity and cloud margins manageable?"
+      ]
+    },
+    {
+      "id": "L6",
+      "name": "Cash, opportunity reserve, and hedges",
+      "target_weight": 0.05,
+      "max_weight": 0.15,
+      "stock_pool": {
+        "core": ["CASH"],
+        "optional": ["SMH", "CLOU"]
+      },
+      "key_questions": [
+        "Is reserve cash available for drawdowns or earnings dislocations?",
+        "Are layer scores too weak to deploy all capital?"
+      ]
+    }
+  ]
+}
